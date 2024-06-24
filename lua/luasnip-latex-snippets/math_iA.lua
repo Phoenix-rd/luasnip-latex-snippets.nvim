@@ -194,6 +194,7 @@ function M.retrieve(is_math)
     parse_snippet({ trig = ";l", name = "lambda" }, "\\lambda "),
     parse_snippet({ trig = ";n", name = "nu" }, "\\nu "),
     parse_snippet({ trig = ";m", name = "mu" }, "\\mu "),
+    parse_snippet({ trig = ";d", name = "delta" }, "\\delta "),
     --big
     parse_snippet({ trig = ";A", name = "Alpha" }, "\\Alpha "),
     parse_snippet({ trig = ";B", name = "Beta" }, "\\Beta "),
@@ -207,6 +208,7 @@ function M.retrieve(is_math)
     parse_snippet({ trig = ";L", name = "Lambda" }, "\\Lambda "),
     parse_snippet({ trig = ";N", name = "Nu" }, "\\Nu "),
     parse_snippet({ trig = ";M", name = "Mu" }, "\\Mu "),
+    parse_snippet({ trig = ";D", name = "Delta" }, "\\Delta "),
 
     --Braces
     parse_snippet({ trig = "(", name = "()" }, "($1)$0"),
