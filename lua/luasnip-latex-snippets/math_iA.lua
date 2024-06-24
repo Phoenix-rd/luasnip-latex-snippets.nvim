@@ -109,7 +109,6 @@ function M.retrieve(is_math)
 
     parse_snippet({ trig = "notin", name = "not in " }, "\\not\\in "),
 
-    parse_snippet({ trig = "cc", name = "subset" }, "\\subset "),
 
     parse_snippet({ trig = "<->", name = "leftrightarrow", priority = 200 }, "\\leftrightarrow"),
     parse_snippet({ trig = "...", name = "ldots", priority = 100 }, "\\ldots "),
@@ -180,6 +179,45 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "invs", name = "inverse" }, "^{-1}"),
     parse_snippet({ trig = "~~", name = "~" }, "\\sim "),
     parse_snippet({ trig = "conj", name = "conjugate" }, "\\overline{$1}$0"),
+
+    --Greek snippets
+    --small
+    parse_snippet({ trig = ";a", name = "alpha" }, "\\alpha "),
+    parse_snippet({ trig = ";b", name = "beta" }, "\\beta "),
+    parse_snippet({ trig = ";g", name = "gamma" }, "\\gamma "),
+    parse_snippet({ trig = ";e", name = "epsilon" }, "\\epsilon "),
+    parse_snippet({ trig = ";p", name = "phi" }, "\\phi "),
+    parse_snippet({ trig = ";y", name = "psi" }, "\\psi "),
+    parse_snippet({ trig = ";s", name = "sigma" }, "\\sigma "),
+    parse_snippet({ trig = ";o", name = "omega" }, "\\omega "),
+    parse_snippet({ trig = ";q", name = "theta" }, "\\theta "),
+    parse_snippet({ trig = ";l", name = "lambda" }, "\\lambda "),
+    parse_snippet({ trig = ";n", name = "nu" }, "\\nu "),
+    parse_snippet({ trig = ";m", name = "mu" }, "\\mu "),
+    --big
+    parse_snippet({ trig = ";A", name = "Alpha" }, "\\Alpha "),
+    parse_snippet({ trig = ";B", name = "Beta" }, "\\Beta "),
+    parse_snippet({ trig = ";G", name = "Gamma" }, "\\Gamma "),
+    parse_snippet({ trig = ";E", name = "Epsilon" }, "\\Epsilon "),
+    parse_snippet({ trig = ";P", name = "Phi" }, "\\Phi "),
+    parse_snippet({ trig = ";Y", name = "Psi" }, "\\Psi "),
+    parse_snippet({ trig = ";S", name = "Sigma" }, "\\Sigma "),
+    parse_snippet({ trig = ";O", name = "Omega" }, "\\Omega "),
+    parse_snippet({ trig = ";Q", name = "Theta" }, "\\Theta "),
+    parse_snippet({ trig = ";L", name = "Lambda" }, "\\Lambda "),
+    parse_snippet({ trig = ";N", name = "Nu" }, "\\Nu "),
+    parse_snippet({ trig = ";M", name = "Mu" }, "\\Mu "),
+
+    --Braces
+    parse_snippet({ trig = "(", name = "()" }, "($1)$0"),
+    parse_snippet({ trig = "[", name = "[]" }, "[$1]$0"),
+    parse_snippet({ trig = "{", name = "{}" }, "{$1}$0"),
+
+    --Quantum mechanics
+    parse_snippet({ trig = "ket", name = "ket" }, "\\ket{$1}$0"),
+    parse_snippet({ trig = "bra", name = "bra" }, "\\bra{$1}$0"),
+    parse_snippet({ trig = "inp", name = "braket" }, "\\braket{$1}{$2}$0"),
+    parse_snippet({ trig = "oup", name = "ketbra" }, "\\ketbra{$1}{$2}$0"),
   }
 end
 

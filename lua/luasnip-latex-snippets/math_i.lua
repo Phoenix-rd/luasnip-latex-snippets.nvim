@@ -12,7 +12,8 @@ function M.retrieve(is_math)
   }) --[[@as function]]
 
   return {
-    parse_snippet({ trig = "sum", name = "sum" }, "\\sum_{n=${1:1}}^{${2:\\infty}} ${3:a_n z^n}"),
+    parse_snippet({ trig = "sum", name = "sum" }, "\\sum_{n=${1:1}} ${2:a_n z^n}"),
+    parse_snippet({ trig = "sumt", name = "sum_top" }, "\\sum_{n=${1:1}}^{${2:\\infty}} ${3:a_n z^n}"),
 
     parse_snippet(
       { trig = "taylor", name = "taylor" },
@@ -24,6 +25,10 @@ function M.retrieve(is_math)
 
     parse_snippet(
       { trig = "prod", name = "product" },
+      "\\prod_{${1:n=${2:1}}} ${3:${TM_SELECTED_TEXT}} $0"
+    ),
+    parse_snippet(
+      { trig = "prod", name = "product_top" },
       "\\prod_{${1:n=${2:1}}}^{${3:\\infty}} ${4:${TM_SELECTED_TEXT}} $0"
     ),
 
@@ -32,7 +37,7 @@ function M.retrieve(is_math)
       "\\frac{\\partial ${1:V}}{\\partial ${2:x}} $0"
     ),
     parse_snippet(
-      { trig = "ddx", name = "d/dx" },
+      { trig = "dv", name = "d/dx" },
       "\\frac{\\mathrm{d/${1:V}}}{\\mathrm{d${2:x}}} $0"
     ),
 
@@ -43,29 +48,20 @@ function M.retrieve(is_math)
       "\\left( ${1:${TM_SELECTED_TEXT}} \\right) $0"
     ),
     parse_snippet(
-      { trig = "lr(", name = "left( right)" },
-      "\\left( ${1:${TM_SELECTED_TEXT}} \\right) $0"
-    ),
-    parse_snippet(
-      { trig = "lr|", name = "left| right|" },
+      { trig = "lrp", name = "left| right|" },
       "\\left| ${1:${TM_SELECTED_TEXT}} \\right| $0"
     ),
     parse_snippet(
-      { trig = "lr{", name = "left{ right}" },
+      { trig = "lrc", name = "left{ right}" },
       "\\left\\{ ${1:${TM_SELECTED_TEXT}} \\right\\\\} $0"
     ),
     parse_snippet(
-      { trig = "lr[", name = "left[ right]" },
+      { trig = "lrs", name = "left[ right]" },
       "\\left[ ${1:${TM_SELECTED_TEXT}} \\right] $0"
     ),
     parse_snippet(
       { trig = "lra", name = "leftangle rightangle" },
       "\\left< ${1:${TM_SELECTED_TEXT}} \\right>$0"
-    ),
-
-    parse_snippet(
-      { trig = "lrb", name = "left\\{ right\\}" },
-      "\\left\\{ ${1:${TM_SELECTED_TEXT}} \\right\\\\} $0"
     ),
 
     parse_snippet(
