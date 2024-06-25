@@ -36,6 +36,17 @@ function M.retrieve(not_math)
 \end{figure}$5
     ]]),
 
+    parse_snippet({ trig = "table", name = "table" }, [[
+\begin{table}[!htbp]
+    \begin{center}
+        \begin{tabular}{$1}
+            $2
+        \end{tabular}
+    \end{center}
+    \caption{$3}
+    \label{$4}
+\end{table}
+    ]]),
     s({ trig = "bigfun", name = "Big function" }, {
       t({ "\\begin{align*}", "\t" }),
       i(1),
