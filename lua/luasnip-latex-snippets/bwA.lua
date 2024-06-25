@@ -66,12 +66,13 @@ function M.retrieve(not_math)
       i(0),
       t({ "", ".\\end{align*}" }),
     }),
-s( -- This snippets creates the sympy block ;)
-    { trig = "sym", desc = "Creates a sympy block" },
-    fmt("sympy {} sympy{}",
-        { i(1), i(0) }
-    )
-)
+
+    s( -- This snippets creates the sympy block
+        { trig = "sym", desc = "Creates a sympy block" },
+        fmt("sympy {} sympy{}",
+            { i(1), i(0) }
+        )
+    ),
 
     s( -- This one evaluates anything inside the simpy block
         { trig = "sympy.*sympy", regTrig = true, desc = "Sympy block evaluator" },
@@ -111,7 +112,7 @@ s( -- This snippets creates the sympy block ;)
             return sn(nil, t(result))
         end)
     )
-  }
+}
 end
 
 return M
