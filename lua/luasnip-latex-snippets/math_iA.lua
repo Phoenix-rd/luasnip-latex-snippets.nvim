@@ -180,6 +180,10 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "~~", name = "~" }, "\\sim "),
     parse_snippet({ trig = "conj", name = "conjugate" }, "\\overline{$1}$0"),
 
+    --Bold
+    parse_snippet({ trig = "bf", name = "mathbf" }, "\\mathbf{$1}$0"),
+
+
     --Greek snippets
     --small
     parse_snippet({ trig = ";a", name = "alpha" }, "\\alpha"),
