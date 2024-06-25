@@ -27,57 +27,6 @@ function M.retrieve(not_math)
 
     parse_snippet({ trig = "beg", name = "begin{} / end{}" }, "\\begin{$1}\n\t$0\n\\end{$1}"),
     parse_snippet({ trig = "case", name = "cases" }, "\\begin{cases}\n\t$1\n\\end{cases}"),
-    parse_snippet({ trig = "Template", name = "cases" }, [[
-\documentclass[a4paper]{$1}
-
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
-\usepackage{amsmath, amssymb}
-\usepackage{gensymb}
-\usepackage{mhchem}
-\usepackage{hyperref}
-\usepackage{pgf}
-
-\hoffset = -70pt
-\voffset = -90pt
-\textwidth=500pt
-\textheight=700pt
-
-% figure support
-\usepackage{import}
-\usepackage{xifthen}
-\pdfminorversion=7
-\usepackage{pdfpages}
-\usepackage{transparent}
-
-\newcommand{\incfig}[1]{%
-    \def\svgwidth{\columnwidth}
-    \import{./figures/}{#1.pdf_tex}
-}
-\newcommand{\ket}[1]{%
-    \bigl| #1 \bigr> 
-}
-\newcommand{\bra}[1]{%
-    \bigl< #1 \bigr|
-}
-\newcommand{\braket}[2]{%
-    \bigl< #1 \bigr| #2 \bigr>
-}
-\newcommand{\ketbra}[2]{%
-    \bigl| #1 \bigr> \bigl< #2 \bigr|
-}
-\pdfsuppresswarningpagegroup=1
-
-\title{$2}
-\author{$3}
-\date{$4}
-
-\begin{document}
-\maketitle
-$0
-\end{document}
-    ]]),
 
     s({ trig = "bigfun", name = "Big function" }, {
       t({ "\\begin{align*}", "\t" }),
