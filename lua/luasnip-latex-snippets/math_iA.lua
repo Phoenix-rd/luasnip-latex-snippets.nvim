@@ -97,18 +97,6 @@ function M.retrieve(is_math)
 
     parse_snippet({ trig = "EE", name = "exists" }, "\\exists "),
     parse_snippet({ trig = "AA", name = "forall" }, "\\forall "),
-    parse_snippet({ trig = "xnn", name = "xn" }, "x_{n}"),
-    parse_snippet({ trig = "ynn", name = "yn" }, "y_{n}"),
-    parse_snippet({ trig = "xii", name = "xi" }, "x_{i}"),
-    parse_snippet({ trig = "yii", name = "yi" }, "y_{i}"),
-    parse_snippet({ trig = "xjj", name = "xj" }, "x_{j}"),
-    parse_snippet({ trig = "yjj", name = "yj" }, "y_{j}"),
-    parse_snippet({ trig = "xp1", name = "x" }, "x_{n+1}"),
-    parse_snippet({ trig = "xmm", name = "x" }, "x_{m}"),
-    parse_snippet({ trig = "R0+", name = "R0+" }, "\\mathbb{R}_0^+"),
-
-    parse_snippet({ trig = "notin", name = "not in " }, "\\not\\in "),
-
 
     parse_snippet({ trig = "<->", name = "leftrightarrow", priority = 200 }, "\\leftrightarrow"),
     parse_snippet({ trig = "...", name = "ldots", priority = 100 }, "\\ldots "),
@@ -126,10 +114,7 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "->", name = "to", priority = 100 }, "\\to "),
     parse_snippet({ trig = "-->", name = "long to", priority = 200 }, "\\longrightarrow "),
 
-    parse_snippet({ trig = "letw", name = "let omega" }, "Let $\\Omega \\subset \\C$ be open."),
-    parse_snippet({ trig = "nnn", name = "bigcap" }, "\\bigcap_{${1:i \\in ${2: I}}} $0"),
-    parse_snippet({ trig = "norm", name = "norm" }, "\\|$1\\|$0"),
-    parse_snippet({ trig = "<>", name = "hokje" }, "\\diamond "),
+    parse_snippet({ trig = "||", name = "norm" }, " \\left|$1\\right|$0 "),
     parse_snippet({ trig = ">>", name = ">>" }, "\\gg"),
     parse_snippet({ trig = "<<", name = "<<" }, "\\ll"),
 
@@ -140,22 +125,14 @@ function M.retrieve(is_math)
 
     parse_snippet({ trig = "**", name = "cdot", priority = 100 }, "\\cdot "),
 
-    parse_snippet({ trig = ":=", name = "colon equals (lhs defined as rhs)" }, "\\coloneqq "),
-
     parse_snippet(
       { trig = "cvec", name = "column vector" },
       "\\begin{pmatrix} ${1:x}_${2:1}\\\\ \\vdots\\\\ $1_${2:n} \\end{pmatrix}"
     ),
-    parse_snippet({ trig = "ceil", name = "ceil" }, "\\left\\lceil $1 \\right\\rceil $0"),
-    parse_snippet({ trig = "OO", name = "emptyset" }, "\\O"),
-    parse_snippet({ trig = "RR", name = "R" }, "\\mathbb{R}"),
-    parse_snippet({ trig = "QQ", name = "Q" }, "\\mathbb{Q}"),
-    parse_snippet({ trig = "ZZ", name = "Z" }, "\\mathbb{Z}"),
     parse_snippet({ trig = "UU", name = "cup" }, "\\cup "),
-    parse_snippet({ trig = "NN", name = "n" }, "\\mathbb{N}"),
-    parse_snippet({ trig = "||", name = "mid" }, " \\mid "),
     parse_snippet({ trig = "Nn", name = "cap" }, "\\cap "),
     parse_snippet({ trig = "bmat", name = "bmat" }, "\\begin{bmatrix} $1 \\end{bmatrix} $0"),
+    parse_snippet({ trig = "vmat", name = "vmat" }, "\\begin{vmatrix} $1 \\end{vmatrix} $0"),
     parse_snippet({ trig = "uuu", name = "bigcup" }, "\\bigcup_{${1:i \\in ${2: I}}} $0"),
     parse_snippet({ trig = "DD", name = "D" }, "\\mathbb{D}"),
     parse_snippet({ trig = "HH", name = "H" }, "\\mathbb{H}"),
@@ -177,8 +154,6 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "<=", name = "leq" }, "\\le "),
     parse_snippet({ trig = ">=", name = "geq" }, "\\ge "),
     parse_snippet({ trig = "invs", name = "inverse" }, "^{-1}"),
-    parse_snippet({ trig = "~~", name = "~" }, "\\sim "),
-    parse_snippet({ trig = "conj", name = "conjugate" }, "\\overline{$1}$0"),
 
     --Bold
     parse_snippet({ trig = "bf", name = "mathbf" }, "\\mathbf{$1}$0"),
@@ -224,6 +199,7 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "bra", name = "bra" }, "\\bra{$1}$0"),
     parse_snippet({ trig = "inp", name = "braket" }, "\\braket{$1}{$2}$0"),
     parse_snippet({ trig = "oup", name = "ketbra" }, "\\ketbra{$1}{$2}$0"),
+    parse_snippet({ trig = "dag", name = "dagger" }, "^{\\dag}$0"),
   }
 end
 
