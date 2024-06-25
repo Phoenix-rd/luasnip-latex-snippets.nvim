@@ -27,6 +27,14 @@ function M.retrieve(not_math)
 
     parse_snippet({ trig = "beg", name = "begin{} / end{}" }, "\\begin{$1}\n\t$0\n\\end{$1}"),
     parse_snippet({ trig = "case", name = "cases" }, "\\begin{cases}\n\t$1\n\\end{cases}"),
+    parse_snippet({ trig = "fig", name = "figure" }, [[
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=$1\textwidth]{$2}
+    \caption{$3}
+    \label{$4}
+\end{figure}$5
+    ]]),
 
     s({ trig = "bigfun", name = "Big function" }, {
       t({ "\\begin{align*}", "\t" }),
