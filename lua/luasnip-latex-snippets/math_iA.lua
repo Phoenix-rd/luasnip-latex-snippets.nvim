@@ -157,6 +157,8 @@ function M.retrieve(is_math)
 
     --Bold
     parse_snippet({ trig = "bf", name = "mathbf" }, "\\mathbf{$1}$0"),
+    --Cases
+    parse_snippet({ trig = "case", name = "cases" }, "\\begin{cases}\n\t$1\n\\end{cases}"),
 
 
     --Greek snippets
