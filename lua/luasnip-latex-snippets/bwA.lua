@@ -35,7 +35,7 @@ function M.retrieve(not_math)
       { t({ "\\begin{itemize}", "\t" }), i(1), t({ "", "\\end{itemize}" }) }
     ),
     parse_snippet({ trig = "beg", name = "begin{} / end{}" }, "\\begin{$1}\n\t$0\n\\end{$1}"),
-    parse_snippet({ trig = "Template", name = "cases" }, [[
+    parse_snippet({ trig = "Template", name = "Template" }, [[
 \documentclass[a4paper]{$1}
 
 \usepackage[utf8]{inputenc}
