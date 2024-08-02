@@ -123,7 +123,7 @@ function M.retrieve(is_math)
 
     parse_snippet({ trig = "xx", name = "cross" }, "\\times "),
 
-    parse_snippet({ trig = "**", name = "cdot", priority = 100 }, "\\cdot "),
+    parse_snippet({ trig = ";.", name = "cdot", priority = 100 }, "\\cdot "),
 
     parse_snippet(
       { trig = "cvec", name = "column vector" },
@@ -159,7 +159,8 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "bf", name = "mathbf" }, "\\mathbf{$1}$0"),
     --Cases
     parse_snippet({ trig = "case", name = "cases" }, "\\begin{cases}\n\t$1\n\\end{cases}"),
-
+    --Mathcal
+    parse_snippet({ trig = "cal", name = "mathcal" }, "\\mathcal{$1}$0"),
 
     --Greek snippets
     --small
@@ -170,7 +171,7 @@ function M.retrieve(is_math)
     parse_snippet({ trig = ";p", name = "phi" }, "\\phi"),
     parse_snippet({ trig = ";y", name = "psi" }, "\\psi"),
     parse_snippet({ trig = ";s", name = "sigma" }, "\\sigma"),
-    parse_snippet({ trig = ";o", name = "omega" }, "\\omega"),
+    parse_snippet({ trig = ";w", name = "omega" }, "\\omega"),
     parse_snippet({ trig = ";q", name = "theta" }, "\\theta"),
     parse_snippet({ trig = ";l", name = "lambda" }, "\\lambda"),
     parse_snippet({ trig = ";n", name = "nu" }, "\\nu"),
@@ -186,7 +187,7 @@ function M.retrieve(is_math)
     parse_snippet({ trig = ";P", name = "Phi" }, "\\Phi"),
     parse_snippet({ trig = ";Y", name = "Psi" }, "\\Psi"),
     parse_snippet({ trig = ";S", name = "Sigma" }, "\\Sigma"),
-    parse_snippet({ trig = ";O", name = "Omega" }, "\\Omega"),
+    parse_snippet({ trig = ";W", name = "Omega" }, "\\Omega"),
     parse_snippet({ trig = ";Q", name = "Theta" }, "\\Theta"),
     parse_snippet({ trig = ";L", name = "Lambda" }, "\\Lambda"),
     parse_snippet({ trig = ";N", name = "Nu" }, "\\Nu"),
