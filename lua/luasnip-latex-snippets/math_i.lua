@@ -64,6 +64,7 @@ function M.retrieve(is_math)
       "\\left< ${1:${TM_SELECTED_TEXT}} \\right>$0"
     ),
 
+
     parse_snippet(
       { trig = "sequence", name = "Sequence indexed by n, from m to infinity" },
       "(${1:a}_${2:n})_{${2:n}=${3:m}}^{${4:\\infty}}"

@@ -35,17 +35,16 @@ function M.retrieve(not_math)
       { t({ "\\begin{itemize}", "\t" }), i(1), t({ "", "\\end{itemize}" }) }
     ),
     parse_snippet({ trig = "beg", name = "begin{} / end{}" }, "\\begin{$1}\n\t$0\n\\end{$1}"),
-    parse_snippet({ trig = "Template", name = "Template" }, [[
+    parse_snippet({ trig = "TEMPLATE", name = "Template" }, [[
 \documentclass[a4paper]{$1}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{textcomp}
 \usepackage{amsmath, amssymb}
 \usepackage{gensymb}
-\usepackage{mhchem}
 \usepackage{hyperref}
 \usepackage{pgf}
+\usepackge{pgfplots}
 
 \hoffset = -70pt
 \voffset = -90pt
@@ -55,9 +54,7 @@ function M.retrieve(not_math)
 % figure support
 \usepackage{import}
 \usepackage{xifthen}
-\pdfminorversion=7
 \usepackage{pdfpages}
-\usepackage{transparent}
 
 \newcommand{\incfig}[1]{%
     \def\svgwidth{\columnwidth}
@@ -75,7 +72,6 @@ function M.retrieve(not_math)
 \newcommand{\ketbra}[2]{%
     \bigl| #1 \bigr> \bigl< #2 \bigr|
 }
-\pdfsuppresswarningpagegroup=1
 
 \title{$2}
 \author{$3}
