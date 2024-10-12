@@ -44,7 +44,7 @@ function M.retrieve(not_math)
 \usepackage{gensymb}
 \usepackage{hyperref}
 \usepackage{pgf}
-\usepackge{pgfplots}
+\usepackage{pgfplots}
 
 \hoffset = -70pt
 \voffset = -90pt
